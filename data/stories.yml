@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+
+- story: check this hash
+  steps:
+  - intent: check_hash
+  - action: utter_ask_hash_info
+  - intent: check_hash
+  - action: utter_checking_hash
+  - action: action_vt_check_hash
+  - intent: thanks
+  - action: utter_you_are_welcome
+
+- story: check this url
+  steps:
+  - intent: check_url
+  - action: utter_ask_url_info
+  - intent: check_url
+  - action: utter_checking_url
+  - action: action_vt_check_url
+  - intent: thanks
+  - action: utter_you_are_welcome

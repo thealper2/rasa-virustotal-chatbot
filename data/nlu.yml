@@ -1,0 +1,66 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: check_hash
+  examples: |
+    - I downloaded a file from an unknown source yesterday. Can you check its hash?
+    - I suspect this software. Could you verify its hash for me?
+    - Before I proceed, can you confirm the hash of a document?
+    - I received an attachment. Can you please check its hash?
+    - I want to make sure this download is safe. Could you check its hash?
+
+- intent: check_url
+  examples: |
+      - I received a suspicious link. Can you check its safety?
+      - I'm unsure about this website. Could you verify its safety?
+      - Before I visit, can you confirm the safety of this URL?
+      - I clicked on a link. Can you please check its reputation?
+      - I want to ensure this website is safe. Could you check its security status?
+
+- intent: hash_info
+  examples: |
+    - [4b827f1684efc868aa9c93ab7e3cc088](target_hash)
+    - [076443c04410fe5db11120f8936f7fb8](target_hash)
+    - [55aa8f76898178c23ff3092e09568ed2](target_hash)
+
+- intent: url_info
+  examples: |
+    - [https://thealper2.github.io](target_url)
+    - [https://cyberdatascience.com.tr](target_url)
+    - [https://github.com/thealper2](target_url)
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very much
+    - thanks
+    - great, thanks

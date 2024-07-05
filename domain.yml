@@ -1,0 +1,57 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_hash
+  - check_url
+  - hash_info
+  - url_info
+  - thanks
+
+entities:
+  - target_hash
+  - target_url
+
+slots:
+  target_hash:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: target_hash
+
+  target_url:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: target_url
+
+actions:
+- action_vt_check_hash
+- action_vt_check_url
+
+responses:
+  utter_greet:
+  - text: "Hey! I am rasa-virustotal-chatbot. I am here to help you to check the any url adress or hash on VirusTotal you wanted."
+
+  utter_goodbye:
+  - text: "Bye."
+
+  utter_ask_hash_info:
+  - text: "Please give me a file hash. Example: cb7af0f984df9183625ba5a9241b9346"
+
+  utter_checking_hash:
+  - text: "Checking Hash: {target_hash}"
+
+  utter_ask_url_info:
+  - text: "Please give me a url address. Example: www.cyberdatascience.com.tr"
+
+  utter_checking_url:
+  - text: "Checking URL: {target_url}"
+
+  utter_you_are_welcome:
+  - text: "You are welcome."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
